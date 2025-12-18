@@ -1,0 +1,75 @@
+:root {
+  --bg: #121212;
+  --panel: #1a1a1a;
+  --ink: #d0d0d0;
+  --muted: #9a9a9a;
+  --line: #2a2a2a;
+  --accent: #888888;
+}
+
+* { box-sizing: border-box; }
+html, body, #root { height: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: "Courier New", Courier, monospace;
+  letter-spacing: 0.2px;
+}
+
+.ui {
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 12px;
+}
+
+.stack { display: grid; gap: 12px; }
+
+.card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  padding: 12px;
+}
+
+.title {
+  color: var(--muted);
+  font-weight: 700;
+  text-transform: lowercase;
+  margin-bottom: 8px;
+}
+
+.row { padding: 4px 0; }
+.status { padding: 6px 0; color: var(--ink); }
+
+.input {
+  width: 100%;
+  background: #101010;
+  border: 1px solid var(--line);
+  color: var(--ink);
+  padding: 10px;
+  outline: none;
+  font-family: inherit;
+  margin-bottom: 8px;
+}
+
+.btn {
+  display: inline-block;
+  background: var(--accent);
+  color: #111;
+  padding: 10px 14px;
+  border: none;
+  font-family: inherit;
+  text-transform: lowercase;
+  cursor: pointer;
+}
+
+.btn:disabled { opacity: 0.5; cursor: not-allowed; }
+
+.note, .hint {
+  color: var(--muted);
+  font-size: 12px;
+  margin-top: 6px;
+}
+
+/* no-spaces aesthetic: tighten word spacing and remove extra gaps */
+p, .row, .status, .note, .hint { word-spacing: -2px; }
